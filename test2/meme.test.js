@@ -9,9 +9,14 @@ describe('meme', function() {
  
         m.validate(function(err) {
             expect(err.errors.name).toNotBe(null);
-            //done();
+            done();
         });
     });
+    it('数据长度测试3',function (done) {  
+
+        expect('sss'.length).toBe(3);
+        done();
+    })
 });
 
 it('【抛出异常】当dank为false', function(done) {
@@ -22,7 +27,7 @@ it('【抛出异常】当dank为false', function(done) {
     m.validate(function(err) {
         //3. check for the error property we need
         expect(err.errors.repost).toExist();
-        //done();
+        done();
     });
 });
  
@@ -35,7 +40,7 @@ it('【正常显示】当dank为True', function(done) {
         //3. check for the error property that shouldn't exist now
        // expect(err.errors.repost).to.not.exist;
         expect(err.errors.repost).toNotExist();
-       // done();
+        done();
     });
 });
 
@@ -57,7 +62,7 @@ it('should call back with true when repost exists', sinon.test(function(done) {
     var m = new Meme({ name: 'some name' });
  
     m.checkForReposts(function(hasReposts) {
-        expect(hasReposts).to.be.true;
+        expect(hasReposts).toBeTruthy();
         done();
     });
 }));
