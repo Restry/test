@@ -301,8 +301,8 @@ node_modules/.bin/gulp test
 
 ## 测试相关网址
 
-- https://github.com/visionmedia/mocha
-- http://visionmedia.github.io/mocha/
+- https://github.com/mochajs/mocha
+- https://mochajs.org/
 - http://mochajs.org/
 - https://github.com/chaijs/chai
 - http://chaijs.com/
